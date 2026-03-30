@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktkarte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/contact-card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <main class="page-shell">
+        <article class="contact-card" aria-label="Kontaktkarte von Max Mustermann">
+            <div class="photo-stage">
+                <img src="250310-Alexander-Krause-webseit.jpg" alt="Portraet von Max Mustermann">
+                <button class="menu-fab" type="button" aria-label="Mitarbeiterinfos anzeigen" aria-expanded="false">
+                    <img src="bleker2.png" alt="Bleker Logo">
+                </button>
+            </div>
+
+            <header class="name-strip">
+                <h1>Alexander Krause</h1>
+                <p class="name-strip-role">Verkaufsberater</p>
+            </header>
+
+            <section class="employee-info" aria-label="Mitarbeiterdetails">
+                <div class="info-header">
+                    <span class="info-name">Alexander Krause</span>
+                    <span class="info-role">Verkaufsberater</span>
+                </div>
+
+                <ul class="info-list">
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <p class="label">Telefon</p>
+                            <a href="tel:+49123456789">+490 151 21228625</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <p class="label">E-Mail</p>
+                            <a href="mailto:a.krause@bleker-gruppe.de">a.krause@bleker-gruppe.de</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <p class="label">Standort</p>
+                            <a class="map-link" href="https://maps.google.com/?q=Borken+Autohaus+Twent" target="_blank" rel="noopener">Münster, Autoforum Bleker <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-car"></i>
+                        <div>
+                            <p class="label">Marken</p>
+                            <div class="brand-tags">
+                                <span class="tag">Maserati</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <a class="callback-btn" href="mailto:max.mustermann@bleker-gruppe.de?subject=Rueckrufwunsch">
+                    <i class="fa-solid fa-phone-volume"></i> Rueckrufwunsch
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <script src="script/contact-card.js"></script>
+</body>
+</html>
