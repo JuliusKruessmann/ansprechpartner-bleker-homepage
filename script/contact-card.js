@@ -1,5 +1,17 @@
 const card = document.querySelector('.contact-card');
 const menuButton = document.querySelector('.menu-fab');
+const emailLink = document.querySelector('.email-link');
+
+const updateEmailCompactState = () => {
+    if (!emailLink) return;
+
+    emailLink.classList.remove('email-link--compact');
+    const isOverflowing = emailLink.scrollWidth > emailLink.clientWidth + 1;
+    emailLink.classList.toggle('email-link--compact', isOverflowing);
+};
+
+window.addEventListener('resize', updateEmailCompactState);
+updateEmailCompactState();
 
 if (card && menuButton) {
     card.addEventListener('click', (e) => {
@@ -10,5 +22,7 @@ if (card && menuButton) {
             'aria-label',
             isExpanded ? 'Mitarbeiterinfos ausblenden' : 'Mitarbeiterinfos anzeigen'
         );
+
+        requestAnimationFrame(updateEmailCompactState);
     });
 }
